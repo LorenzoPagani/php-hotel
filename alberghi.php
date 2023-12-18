@@ -47,15 +47,61 @@ $hotels = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>hotels</title>
 </head>
 
 <body>
-    <?php
-    foreach ($hotels as $hotel) {
-        echo $hotel["name"] . " ";
-    }
-    ?>
-</body>
+    <div class="container">
+        <table class="table table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col-12" colspan="6">Alberghi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">nome</th>
+                    <td><?php echo $hotels[0]["name"] ?></td>
+                    <td><?php echo $hotels[1]["name"] ?></td>
+                    <td><?php echo $hotels[2]["name"] ?></td>
+                    <td><?php echo $hotels[3]["name"] ?></td>
+                    <td><?php echo $hotels[4]["name"] ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">voto</th>
+                    <td><?php echo $hotels[0]["vote"] ?></td>
+                    <td><?php echo $hotels[1]["vote"] ?></td>
+                    <td><?php echo $hotels[2]["vote"] ?></td>
+                    <td><?php echo $hotels[3]["vote"] ?></td>
+                    <td><?php echo $hotels[4]["vote"] ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">Parcheggio</th>
+                    <td><?php echo $hotels[0]["parking"] ?></td>
+                    <td><?php echo $hotels[1]["parking"] ?></td>
+                    <td><?php echo $hotels[2]["parking"] ?></td>
+                    <td><?php echo $hotels[3]["parking"] ?></td>
+                    <td><?php echo $hotels[4]["parking"] ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">distanza dal centro</th>
+                    <td><?php echo $hotels[0]["distance_to_center"] . 'Km' ?></td>
+                    <td><?php echo $hotels[1]["distance_to_center"] . 'Km' ?></td>
+                    <td><?php echo $hotels[2]["distance_to_center"] . 'Km' ?></td>
+                    <td><?php echo $hotels[3]["distance_to_center"] . 'Km' ?></td>
+                    <td><?php echo $hotels[4]["distance_to_center"] . 'Km' ?></td>
+                </tr>
 
-</html>
+            </tbody>
+        </table>
+    </div>
+
+    <?php
+    /*  foreach ($hotels as $hotel) {
+        echo $hotel["name"] . " ";
+    } */
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
